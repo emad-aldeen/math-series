@@ -18,8 +18,10 @@ def lucas(n):
 
 
 def sum_series(n,f=0,s=1):
-    if f >= 1 and s >= 2:
+    if f == 2 and s == 1:
         return lucas(n)
-    else:
+    elif f == 0 and s == 1:
         return fibonacci(n)
+    else:
+        return fibonacci(n) + lucas(f)
     
